@@ -232,6 +232,7 @@ namespace ILDisassembler
 		/// <summary>
 		/// Returns the generic parameters
 		/// </summary>
+		/// <param name="currentAssembly">The current assembly</param>
 		/// <param name="genericParameters">The generic parameters</param>
 		private static string GetGenericParameters(Assembly currentAssembly, Type[] genericParameters)
 		{
@@ -854,7 +855,7 @@ namespace ILDisassembler
 		/// <summary>
 		/// Disassembles the given property
 		/// </summary>
-		/// <param name="eventRef">The property</param>
+		/// <param name="property">The property</param>
 		public string DissassembleProperty(PropertyInfo property)
 		{
 			var outputWriter = new OutputWriter(4);
