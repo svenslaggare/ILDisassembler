@@ -13,6 +13,7 @@ namespace ILDisassembler
 	{
 		private StringBuilder stringBuilder;
 		private int indentationSize;
+		private int indentationLevel = 0;
 		private string indendationStr = "";
 
 		/// <summary>
@@ -26,6 +27,22 @@ namespace ILDisassembler
 		}
 
 		/// <summary>
+		/// Returns the indentation level
+		/// </summary>
+		public int IndentationLevel
+		{
+			get { return this.indentationLevel; }
+		}
+
+		/// <summary>
+		/// Returns the size (number of spaces) per indentation level
+		/// </summary>
+		public int IndentationSize
+		{
+			get { return this.indentationSize; }
+		}
+
+		/// <summary>
 		/// Increases the indentation one level
 		/// </summary>
 		public void Indent()
@@ -34,6 +51,8 @@ namespace ILDisassembler
 			{
 				indendationStr += " ";
 			}
+
+			this.indentationLevel++;
 		}
 
 		/// <summary>
@@ -42,6 +61,7 @@ namespace ILDisassembler
 		public void Unindent()
 		{
 			indendationStr = indendationStr.Substring(0, this.indendationStr.Length - this.indentationSize);
+			this.indentationLevel--;
 		}
 
 		/// <summary>

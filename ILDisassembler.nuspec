@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
     <metadata>
         <id>ILDisassembler</id>
-        <version>1.0.1-beta</version>
+        <version>1.0.0-beta2</version>
         <title>ILDisassembler</title>
         <authors>Anton Jansson</authors>
         <licenseUrl>https://github.com/svenslaggare/ILDisassembler/blob/master/README.md</licenseUrl>
@@ -10,9 +10,9 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>IL disassembler written using reflection.</description>
         <summary>IL disassembler written using reflection.</summary>
-        <tags>disassembler, il cil,</tags>
+        <tags>disassembler, il, cil, reflection</tags>
         <dependencies>
-            <dependency id="Microsoft.Bcl.Immutable" version="1.1.20-beta" />
+            <dependency id="System.Collections.Immutable" version="1.1.33-beta" />
         </dependencies>
     </metadata>
     <files>

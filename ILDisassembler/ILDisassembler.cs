@@ -17,8 +17,8 @@ namespace ILDisassembler
 	{
 
 		#region Fields
-		private static IList<string> attrIgnoreList;
-		private static IDictionary<string, string> typeAliases;
+		private static readonly IList<string> attrIgnoreList;
+		private static readonly IDictionary<string, string> typeAliases;
 		#endregion
 
 		#region Help classes
@@ -434,6 +434,7 @@ namespace ILDisassembler
 			//Calculate the maximum spacing between the instruction and operands and code size
 			int maxSpacing = int.MinValue;
 			int codeSize = 0;
+			int maxIndentationLevel = int.MinValue;
 
 			foreach (var inst in methodInstructions)
 			{
@@ -679,7 +680,10 @@ namespace ILDisassembler
 				}
 				#endregion
 
-				outputWriter.AppendLine(inst.ToString(maxSpacing + 3));
+				maxIndentationLevel = Math.Max(outputWriter.IndentationLevel, maxIndentationLevel);
+				//int spacing = maxSpacing + 3 + ((maxIndentationLevel - outputWriter.IndentationLevel) * outputWriter.IndentationSize);
+				int spacing = maxSpacing + 3;
+				outputWriter.AppendLine(inst.ToString(spacing));
 			}
 		}
 

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILDisassembler", "ILDisassembler\ILDisassembler.csproj", "{EFDFED23-D722-422F-8D75-F5B05F8C60EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILDisassembler.Test", "ILDisassembler.Test\ILDisassembler.Test.csproj", "{7AE43AA8-9F7A-421A-804B-2987D7D69DE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EFDFED23-D722-422F-8D75-F5B05F8C60EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFDFED23-D722-422F-8D75-F5B05F8C60EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFDFED23-D722-422F-8D75-F5B05F8C60EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE43AA8-9F7A-421A-804B-2987D7D69DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE43AA8-9F7A-421A-804B-2987D7D69DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE43AA8-9F7A-421A-804B-2987D7D69DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE43AA8-9F7A-421A-804B-2987D7D69DE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
